@@ -130,7 +130,13 @@
             background: var(--primary-blue);
             color: white;
         }
-
+        .logo img {
+            max-height: 80px; /* make it bigger than 60px */
+            width: auto;
+            object-fit: contain; /* keeps aspect ratio */
+            display: block;
+        }
+        
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--light-blue) 0%, #f0f9ff 100%);
@@ -647,8 +653,8 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <div class="">
-                    <img src="sectumAI_logo.png" alt="sectumAI Logo" style="height: 60px; width: auto;">
+                <div class="logo">
+                    <img src="sectumAI_logo.png" alt="sectumAI Logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#problem">Problems</a></li>
