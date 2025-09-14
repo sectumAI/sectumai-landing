@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sectumAI – Planning Intelligence</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; color: #222;}
+    header {background: #111; color: #fff; padding: 1.5rem; text-align: center;}
+    header h1 {margin: 0; font-size: 2rem; display: flex; align-items: center; justify-content: center;}
+    header img {height: 40px; margin-right: 10px;}
+    nav {margin-top: 0.5rem;}
+    nav a {color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold;}
+    section {padding: 3rem 2rem; max-width: 900px; margin: auto;}
+    .features {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;}
+    .card {border: 1px solid #ddd; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s;}
+    .card:hover {transform: translateY(-5px);}
+    .card h3 {margin-top: 0;}
+    .modal {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center;}
+    .modal-content {background: #fff; padding: 2rem; border-radius: 10px; max-width: 500px;}
+    .close {float: right; cursor: pointer; font-size: 1.2rem;}
+    footer {background: #f3f3f3; text-align: center; padding: 2rem; margin-top: 3rem; font-size: 0.9rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="ChatGPT Image Sep 14, 2025, 01_45_08 PM.png" alt="sectumAI logo"> sectumAI</h1>
+    <p>Planning Intelligence for E-Commerce Retailers</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About sectumAI</h2>
+    <p>sectumAI provides smart demand & supply planning solutions for small and mid-sized e-commerce retailers. We help you clean demand history, forecast accurately, plan demand, and optimize supply so you can scale with confidence.</p>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="card" onclick="openModal('history')">
+        <h3>Demand History Cleaning</h3>
+        <p>Detect and correct outliers, stock-outs, and data gaps.</p>
+      </div>
+      <div class="card" onclick="openModal('forecast')">
+        <h3>Demand Forecast</h3>
+        <p>AI-driven forecasting at weekly or monthly levels.</p>
+      </div>
+      <div class="card" onclick="openModal('plan')">
+        <h3>Demand Planning</h3>
+        <p>Enable planners to adjust forecasts with insights.</p>
+      </div>
+      <div class="card" onclick="openModal('procurement')">
+        <h3>Procurement Optimization</h3>
+        <p>Balance cost, lead time, and vendor constraints.</p>
+      </div>
+      <div class="card" onclick="openModal('supply')">
+        <h3>Supply Optimization</h3>
+        <p>Optimize inventory flow to minimize costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email us at <a href="mailto:info@sectumai.com">info@sectumai.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 sectumAI. All rights reserved. Visit us at <a href="https://sectumai.com">sectumai.com</a></p>
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal-history" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('history')">&times;</span><h3>Demand History Cleaning</h3><p>Our system identifies missing or misleading data, flags anomalies, and rebuilds a trustworthy demand baseline.</p></div></div>
+  <div id="modal-forecast" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('forecast')">&times;</span><h3>Demand Forecast</h3><p>We apply advanced forecasting models tailored for e-commerce, helping you plan with precision.</p></div></div>
+  <div id="modal-plan" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('plan')">&times;</span><h3>Demand Planning</h3><p>Interactive planning layer for business managers to refine forecasts and align with campaigns.</p></div></div>
+  <div id="modal-procurement" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('procurement')">&times;</span><h3>Procurement Optimization</h3><p>Our optimization models suggest efficient order schedules while considering supplier terms.</p></div></div>
+  <div id="modal-supply" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('supply')">&times;</span><h3>Supply Optimization</h3><p>Balance service level and inventory costs by generating optimized supply plans.</p></div></div>
+
+  <script>
+    function openModal(name) {
+      document.getElementById('modal-' + name).style.display = 'flex';
+    }
+    function closeModal(name) {
+      document.getElementById('modal-' + name).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
